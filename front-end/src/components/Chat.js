@@ -69,7 +69,7 @@ function Chat({color}){
                  setSmShow(false)}}
             aria-labelledby="example-modal-sizes-title-sm"
         >
-            <Modal.Header >
+            <Modal.Header closeButton={true}>
             <Modal.Title id="example-modal-sizes-title-sm">
                 Chat
             </Modal.Title>

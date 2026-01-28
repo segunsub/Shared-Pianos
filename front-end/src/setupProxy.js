@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/socket.io',
     createProxyMiddleware({
-      target: 'http://localhost:8000',
+      target: process.env.URLPATH || 'https://shared-pianos-production.up.railway.app',
       changeOrigin: true,
     })
   );
