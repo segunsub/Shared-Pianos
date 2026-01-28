@@ -25,7 +25,6 @@ io.on('connection', socket => {
     })
 
     socket.on('play sound', (body) => {
-        console.log("here", body)
         const user = getUser(socket.id)
         socket.broadcast.to(user.room).emit('play sound', { body, user })
     })

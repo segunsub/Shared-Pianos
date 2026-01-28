@@ -37,7 +37,6 @@ function Chat({color}){
     useEffect(() => {
         socket.on('receive message', ({messages}) => {
             setNewMessages(messages)
-            console.log(messages)
             if(messages.length) {
                setMsgCount(prev => {
                    const number =  messages.length - prev.count
@@ -52,7 +51,6 @@ function Chat({color}){
         <div>
         <span className='notif'>{msgCount.text}</span>
         <Button id='chatBtn'  variant="success" onClick={() =>{ setSmShow(true);
-        console.log(messageEl)
         if(messageEl.current) {
             messageEl.current.scrollTop = messageEl.current.scrollHeight
         } 
@@ -71,7 +69,7 @@ function Chat({color}){
                  setSmShow(false)}}
             aria-labelledby="example-modal-sizes-title-sm"
         >
-            <Modal.Header closeButton={()=> console.log('sdcsf')} >
+            <Modal.Header >
             <Modal.Title id="example-modal-sizes-title-sm">
                 Chat
             </Modal.Title>

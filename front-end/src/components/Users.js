@@ -11,7 +11,7 @@ function Users({ color }) {
         })        
     }, [])
     useEffect(() => {
-        if (messageEl.current) {
+        if (messageEl.current && messageEl.current.scrollTop) {
           messageEl.current.scrollTop = messageEl.current.scrollHeight
           setTimeout(function(){
             messageEl.current.scrollTop = 0;

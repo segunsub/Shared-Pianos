@@ -1,7 +1,6 @@
 const messages = []
 
 const addMessage = (obj) => {
-    console.log(obj)
     messages.push(obj)
     return messages
 }
